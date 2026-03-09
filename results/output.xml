@@ -1,1215 +1,334 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.13.5 on win32)" generated="2026-03-02T09:35:22.974673" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.13.5 on win32)" generated="2026-03-09T08:43:51.144102" rpa="false" schemaversion="5">
 <suite id="s1" name="Robot Framework" source="C:\Users\tapai-feromarcell\Desktop\robot_framework">
-<suite id="s1-s1" name="Sorting alphabetically" source="C:\Users\tapai-feromarcell\Desktop\robot_framework\Sorting_alphabetically.robot">
-<test id="s1-s1-t1" name="Sort products Z to A" line="9">
+<suite id="s1-s1" name="Checkout" source="C:\Users\tapai-feromarcell\Desktop\robot_framework\checkout.robot">
+<test id="s1-s1-t1" name="Checkout validation" line="9">
 <kw name="Login with standard user" owner="Login_keywords">
 <kw name="Open Browser" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:23.268907" level="INFO">Opening browser 'Firefox' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2026-03-09T08:43:51.459262" level="INFO">Opening browser 'Firefox' to base url 'https://www.saucedemo.com/'.</msg>
 <arg>https://www.saucedemo.com/</arg>
 <arg>browser=Firefox</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-03-02T09:35:23.268530" elapsed="5.992286"/>
+<status status="PASS" start="2026-03-09T08:43:51.458932" elapsed="6.026181"/>
 </kw>
 <kw name="Input Text" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:29.261884" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<msg time="2026-03-09T08:43:57.486481" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
 <arg>id:user-name</arg>
 <arg>standard_user</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.261216" elapsed="0.089648"/>
+<status status="PASS" start="2026-03-09T08:43:57.485626" elapsed="0.107642"/>
 </kw>
 <kw name="Input Password" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:29.351445" level="INFO">Typing password into text field 'id:password'.</msg>
-<msg time="2026-03-02T09:35:29.356640" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2026-03-09T08:43:57.593816" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2026-03-09T08:43:57.601401" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>id:password</arg>
 <arg>secret_sauce</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.351101" elapsed="0.028026"/>
+<status status="PASS" start="2026-03-09T08:43:57.593514" elapsed="0.028058"/>
 </kw>
 <kw name="Click Button" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:29.379650" level="INFO">Clicking button 'id:login-button'.</msg>
+<msg time="2026-03-09T08:43:57.622093" level="INFO">Clicking button 'id:login-button'.</msg>
 <arg>id:login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.379354" elapsed="0.140542"/>
+<status status="PASS" start="2026-03-09T08:43:57.621798" elapsed="0.117978"/>
 </kw>
-<status status="PASS" start="2026-03-02T09:35:23.267568" elapsed="6.252514"/>
+<status status="PASS" start="2026-03-09T08:43:51.458002" elapsed="6.282151"/>
 </kw>
-<kw name="Click Element" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:29.520704" level="INFO">Clicking element 'class:product_sort_container'.</msg>
-<arg>class:product_sort_container</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.520382" elapsed="0.115496"/>
-</kw>
-<kw name="Click Element" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:29.638226" level="INFO">Clicking element '//*[@id="header_container"]/div[2]/div/span/select/option[2]'.</msg>
-<arg>//*[@id="header_container"]/div[2]/div/span/select/option[2]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.637705" elapsed="0.092825"/>
-</kw>
-<kw name="Get all products">
-<kw name="Create List" owner="BuiltIn">
-<msg time="2026-03-02T09:35:29.735270" level="INFO">${products} = []</msg>
-<var>${products}</var>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.733579" elapsed="0.002755"/>
-</kw>
-<kw name="Get WebElements" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:29.749256" level="INFO">@{product_elements} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="d090a43f-7326-4494-bd01-b9785d7f7e75", element="3059fdc9-ba41-49ac-851d-8a787ce66707")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement ...</msg>
-<var>@{product_elements}</var>
-<arg>class:inventory_item_name</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.737190" elapsed="0.012664"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:29.769871" level="INFO">${product_name} = Test.allTheThings() T-Shirt (Red)</msg>
-<var>${product_name}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.753140" elapsed="0.017330"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${products}</arg>
-<arg>${product_name}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.771007" elapsed="0.000743"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d090a43f-7326-4494-bd01-b9785d7f7e75", element="3059fdc9-ba41-49ac-851d-8a787ce66707")&gt;</var>
-<status status="PASS" start="2026-03-02T09:35:29.752004" elapsed="0.019937"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:29.780142" level="INFO">${product_name} = Sauce Labs Onesie</msg>
-<var>${product_name}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.772604" elapsed="0.007705"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${products}</arg>
-<arg>${product_name}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.780526" elapsed="0.000372"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d090a43f-7326-4494-bd01-b9785d7f7e75", element="72ec4d65-67d1-4515-a6ed-221ba70287a4")&gt;</var>
-<status status="PASS" start="2026-03-02T09:35:29.772203" elapsed="0.008807"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:29.788009" level="INFO">${product_name} = Sauce Labs Fleece Jacket</msg>
-<var>${product_name}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.781363" elapsed="0.006801"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${products}</arg>
-<arg>${product_name}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.788363" elapsed="0.000343"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d090a43f-7326-4494-bd01-b9785d7f7e75", element="16d19d0a-949b-4578-b623-c0a202328133")&gt;</var>
-<status status="PASS" start="2026-03-02T09:35:29.781180" elapsed="0.007623"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:29.798149" level="INFO">${product_name} = Sauce Labs Bolt T-Shirt</msg>
-<var>${product_name}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.789109" elapsed="0.009200"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${products}</arg>
-<arg>${product_name}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.798517" elapsed="0.000474"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d090a43f-7326-4494-bd01-b9785d7f7e75", element="187b627d-ad41-4b5a-9aac-f429f1866991")&gt;</var>
-<status status="PASS" start="2026-03-02T09:35:29.788946" elapsed="0.010150"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:29.807212" level="INFO">${product_name} = Sauce Labs Bike Light</msg>
-<var>${product_name}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.799416" elapsed="0.007953"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${products}</arg>
-<arg>${product_name}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.807576" elapsed="0.000461"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d090a43f-7326-4494-bd01-b9785d7f7e75", element="b55db44c-d1fb-433d-9664-d7e49bdbad6f")&gt;</var>
-<status status="PASS" start="2026-03-02T09:35:29.799240" elapsed="0.008907"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:29.814783" level="INFO">${product_name} = Sauce Labs Backpack</msg>
-<var>${product_name}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.808638" elapsed="0.006412"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${products}</arg>
-<arg>${product_name}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.815264" elapsed="0.000448"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d090a43f-7326-4494-bd01-b9785d7f7e75", element="a7e5fae0-125e-437e-9461-ec429e2d1949")&gt;</var>
-<status status="PASS" start="2026-03-02T09:35:29.808445" elapsed="0.007393"/>
-</iter>
-<var>${element}</var>
-<value>@{product_elements}</value>
-<status status="PASS" start="2026-03-02T09:35:29.750455" elapsed="0.065473"/>
-</for>
-<return>
-<value>@{products}</value>
-<status status="PASS" start="2026-03-02T09:35:29.816044" elapsed="0.000148"/>
-</return>
-<msg time="2026-03-02T09:35:29.816400" level="INFO">${product_names} = ['Test.allTheThings() T-Shirt (Red)', 'Sauce Labs Onesie', 'Sauce Labs Fleece Jacket', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Bike Light', 'Sauce Labs Backpack']</msg>
-<var>${product_names}</var>
-<status status="PASS" start="2026-03-02T09:35:29.732122" elapsed="0.084442"/>
-</kw>
-<kw name="Verify Z to A sorting">
-<kw name="Get Length" owner="BuiltIn">
-<msg time="2026-03-02T09:35:29.818042" level="INFO">Length is 6.</msg>
-<msg time="2026-03-02T09:35:29.818289" level="INFO">${length} = 6</msg>
-<var>${length}</var>
-<arg>${product_names}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.817415" elapsed="0.001123"/>
-</kw>
-<for flavor="IN RANGE">
-<iter>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:29.820169" level="INFO">${current} = Test.allTheThings() T-Shirt (Red)</msg>
-<var>${current}</var>
-<arg>${product_names}</arg>
-<arg>${i}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.819708" elapsed="0.000726"/>
-</kw>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:29.821627" level="INFO">${next} = Sauce Labs Onesie</msg>
-<var>${next}</var>
-<arg>${product_names}</arg>
-<arg>${i+1}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.820838" elapsed="0.000962"/>
-</kw>
-<kw name="Should Be True" owner="BuiltIn">
-<arg>'${current}' &gt;= '${next}'</arg>
-<arg>Product not in Z to A order ${current} &lt; ${next}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.822000" elapsed="0.000718"/>
-</kw>
-<var name="${i}">0</var>
-<status status="PASS" start="2026-03-02T09:35:29.819263" elapsed="0.003568"/>
-</iter>
-<iter>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:29.823657" level="INFO">${current} = Sauce Labs Onesie</msg>
-<var>${current}</var>
-<arg>${product_names}</arg>
-<arg>${i}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.823283" elapsed="0.000593"/>
-</kw>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:29.824782" level="INFO">${next} = Sauce Labs Fleece Jacket</msg>
-<var>${next}</var>
-<arg>${product_names}</arg>
-<arg>${i+1}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.824131" elapsed="0.000902"/>
-</kw>
-<kw name="Should Be True" owner="BuiltIn">
-<arg>'${current}' &gt;= '${next}'</arg>
-<arg>Product not in Z to A order ${current} &lt; ${next}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.825234" elapsed="0.000663"/>
-</kw>
-<var name="${i}">1</var>
-<status status="PASS" start="2026-03-02T09:35:29.822979" elapsed="0.003043"/>
-</iter>
-<iter>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:29.826751" level="INFO">${current} = Sauce Labs Fleece Jacket</msg>
-<var>${current}</var>
-<arg>${product_names}</arg>
-<arg>${i}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.826397" elapsed="0.000574"/>
-</kw>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:29.827740" level="INFO">${next} = Sauce Labs Bolt T-Shirt</msg>
-<var>${next}</var>
-<arg>${product_names}</arg>
-<arg>${i+1}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.827152" elapsed="0.000828"/>
-</kw>
-<kw name="Should Be True" owner="BuiltIn">
-<arg>'${current}' &gt;= '${next}'</arg>
-<arg>Product not in Z to A order ${current} &lt; ${next}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.828190" elapsed="0.000844"/>
-</kw>
-<var name="${i}">2</var>
-<status status="PASS" start="2026-03-02T09:35:29.826178" elapsed="0.002994"/>
-</iter>
-<iter>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:29.830037" level="INFO">${current} = Sauce Labs Bolt T-Shirt</msg>
-<var>${current}</var>
-<arg>${product_names}</arg>
-<arg>${i}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.829625" elapsed="0.000633"/>
-</kw>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:29.831114" level="INFO">${next} = Sauce Labs Bike Light</msg>
-<var>${next}</var>
-<arg>${product_names}</arg>
-<arg>${i+1}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.830467" elapsed="0.000886"/>
-</kw>
-<kw name="Should Be True" owner="BuiltIn">
-<arg>'${current}' &gt;= '${next}'</arg>
-<arg>Product not in Z to A order ${current} &lt; ${next}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.831556" elapsed="0.000626"/>
-</kw>
-<var name="${i}">3</var>
-<status status="PASS" start="2026-03-02T09:35:29.829380" elapsed="0.002923"/>
-</iter>
-<iter>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:29.833067" level="INFO">${current} = Sauce Labs Bike Light</msg>
-<var>${current}</var>
-<arg>${product_names}</arg>
-<arg>${i}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.832694" elapsed="0.000584"/>
-</kw>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:29.834022" level="INFO">${next} = Sauce Labs Backpack</msg>
-<var>${next}</var>
-<arg>${product_names}</arg>
-<arg>${i+1}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.833469" elapsed="0.000742"/>
-</kw>
-<kw name="Should Be True" owner="BuiltIn">
-<arg>'${current}' &gt;= '${next}'</arg>
-<arg>Product not in Z to A order ${current} &lt; ${next}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.834388" elapsed="0.000570"/>
-</kw>
-<var name="${i}">4</var>
-<status status="PASS" start="2026-03-02T09:35:29.832461" elapsed="0.002617"/>
-</iter>
-<var>${i}</var>
-<value>0</value>
-<value>${length}-1</value>
-<status status="PASS" start="2026-03-02T09:35:29.818726" elapsed="0.016429"/>
-</for>
-<arg>${product_names}</arg>
-<status status="PASS" start="2026-03-02T09:35:29.816921" elapsed="0.018354"/>
+<kw name="Page Should Contain Element" owner="Selenium2Library">
+<msg time="2026-03-09T08:43:57.745460" level="INFO">Current page contains element 'id: shopping_cart_container'.</msg>
+<arg>id: shopping_cart_container</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2026-03-09T08:43:57.740734" elapsed="0.005277"/>
 </kw>
 <kw name="Click Element" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:29.836100" level="INFO">Clicking element 'class:product_sort_container'.</msg>
-<arg>class:product_sort_container</arg>
+<msg time="2026-03-09T08:43:57.747139" level="INFO">Clicking element '//*[@id="item_4_title_link"]/div'.</msg>
+<arg>//*[@id="item_4_title_link"]/div</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.835768" elapsed="0.088227"/>
+<status status="PASS" start="2026-03-09T08:43:57.746554" elapsed="0.081508"/>
+</kw>
+<kw name="Click Button" owner="Selenium2Library">
+<msg time="2026-03-09T08:43:57.829032" level="INFO">Clicking button '//*[@id="add-to-cart"]'.</msg>
+<arg>//*[@id="add-to-cart"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T08:43:57.828614" elapsed="0.086488"/>
 </kw>
 <kw name="Click Element" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:29.927673" level="INFO">Clicking element '//*[@id="header_container"]/div[2]/div/span/select/option[1]'.</msg>
-<arg>//*[@id="header_container"]/div[2]/div/span/select/option[1]</arg>
+<msg time="2026-03-09T08:43:57.918102" level="INFO">Clicking element '//*[@id="shopping_cart_container"]/a'.</msg>
+<arg>//*[@id="shopping_cart_container"]/a</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:29.925807" elapsed="0.113861"/>
+<status status="PASS" start="2026-03-09T08:43:57.916812" elapsed="0.113960"/>
 </kw>
-<kw name="Get all products">
-<kw name="Create List" owner="BuiltIn">
-<msg time="2026-03-02T09:35:30.044637" level="INFO">${products} = []</msg>
-<var>${products}</var>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.043047" elapsed="0.002155"/>
+<kw name="Page Should Contain" owner="Selenium2Library">
+<msg time="2026-03-09T08:43:58.047170" level="INFO">Current page contains text 'Your Cart'.</msg>
+<arg>Your Cart</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-03-09T08:43:58.032554" elapsed="0.016008"/>
 </kw>
-<kw name="Get WebElements" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:30.055255" level="INFO">@{product_elements} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="d090a43f-7326-4494-bd01-b9785d7f7e75", element="a7e5fae0-125e-437e-9461-ec429e2d1949")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement ...</msg>
-<var>@{product_elements}</var>
-<arg>class:inventory_item_name</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.045926" elapsed="0.009947"/>
+<kw name="Click Button" owner="Selenium2Library">
+<msg time="2026-03-09T08:43:58.052054" level="INFO">Clicking button '//*[@id="checkout"]'.</msg>
+<arg>//*[@id="checkout"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T08:43:58.051130" elapsed="0.099079"/>
 </kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:30.082559" level="INFO">${product_name} = Sauce Labs Backpack</msg>
-<var>${product_name}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.058916" elapsed="0.024226"/>
+<kw name="Page Should Contain" owner="Selenium2Library">
+<msg time="2026-03-09T08:43:58.169992" level="INFO">Current page contains text 'Checkout: Your Information'.</msg>
+<arg>Checkout: Your Information</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-03-09T08:43:58.151342" elapsed="0.019831"/>
 </kw>
-<kw name="Append To List" owner="Collections">
-<arg>${products}</arg>
-<arg>${product_name}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.083892" elapsed="0.001362"/>
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2026-03-09T08:43:58.173595" level="INFO">Typing text 'abc' into text field '//*[@id="last-name"]'.</msg>
+<arg>//*[@id="last-name"]</arg>
+<arg>abc</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T08:43:58.172372" elapsed="0.051546"/>
 </kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d090a43f-7326-4494-bd01-b9785d7f7e75", element="a7e5fae0-125e-437e-9461-ec429e2d1949")&gt;</var>
-<status status="PASS" start="2026-03-02T09:35:30.057931" elapsed="0.027975"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:30.123128" level="INFO">${product_name} = Sauce Labs Bike Light</msg>
-<var>${product_name}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.087934" elapsed="0.035608"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-09T08:43:59.225663" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-09T08:43:58.224497" elapsed="1.001953"/>
 </kw>
-<kw name="Append To List" owner="Collections">
-<arg>${products}</arg>
-<arg>${product_name}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.124098" elapsed="0.001023"/>
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2026-03-09T08:43:59.229315" level="INFO">Typing text '6100' into text field '//*[@id="postal-code"]'.</msg>
+<arg>//*[@id="postal-code"]</arg>
+<arg>6100</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T08:43:59.227925" elapsed="0.043016"/>
 </kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d090a43f-7326-4494-bd01-b9785d7f7e75", element="b55db44c-d1fb-433d-9664-d7e49bdbad6f")&gt;</var>
-<status status="PASS" start="2026-03-02T09:35:30.086642" elapsed="0.038795"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:30.144819" level="INFO">${product_name} = Sauce Labs Bolt T-Shirt</msg>
-<var>${product_name}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.126653" elapsed="0.018680"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${products}</arg>
-<arg>${product_name}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.145941" elapsed="0.001143"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d090a43f-7326-4494-bd01-b9785d7f7e75", element="187b627d-ad41-4b5a-9aac-f429f1866991")&gt;</var>
-<status status="PASS" start="2026-03-02T09:35:30.125867" elapsed="0.021529"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:30.164233" level="INFO">${product_name} = Sauce Labs Fleece Jacket</msg>
-<var>${product_name}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.148398" elapsed="0.016251"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${products}</arg>
-<arg>${product_name}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.165210" elapsed="0.001203"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d090a43f-7326-4494-bd01-b9785d7f7e75", element="16d19d0a-949b-4578-b623-c0a202328133")&gt;</var>
-<status status="PASS" start="2026-03-02T09:35:30.147808" elapsed="0.018906"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:30.180464" level="INFO">${product_name} = Sauce Labs Onesie</msg>
-<var>${product_name}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.167796" elapsed="0.012927"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${products}</arg>
-<arg>${product_name}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.181059" elapsed="0.000632"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d090a43f-7326-4494-bd01-b9785d7f7e75", element="72ec4d65-67d1-4515-a6ed-221ba70287a4")&gt;</var>
-<status status="PASS" start="2026-03-02T09:35:30.167138" elapsed="0.014742"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:30.190186" level="INFO">${product_name} = Test.allTheThings() T-Shirt (Red)</msg>
-<var>${product_name}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.182411" elapsed="0.008086"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${products}</arg>
-<arg>${product_name}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.190754" elapsed="0.000432"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d090a43f-7326-4494-bd01-b9785d7f7e75", element="3059fdc9-ba41-49ac-851d-8a787ce66707")&gt;</var>
-<status status="PASS" start="2026-03-02T09:35:30.182134" elapsed="0.009190"/>
-</iter>
-<var>${element}</var>
-<value>@{product_elements}</value>
-<status status="PASS" start="2026-03-02T09:35:30.056458" elapsed="0.134961"/>
-</for>
-<return>
-<value>@{products}</value>
-<status status="PASS" start="2026-03-02T09:35:30.191538" elapsed="0.000183"/>
-</return>
-<msg time="2026-03-02T09:35:30.191976" level="INFO">${product_names} = ['Sauce Labs Backpack', 'Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Fleece Jacket', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']</msg>
-<var>${product_names}</var>
-<status status="PASS" start="2026-03-02T09:35:30.041338" elapsed="0.150902"/>
-</kw>
-<kw name="Verify A to Z sorting">
-<kw name="Get Length" owner="BuiltIn">
-<msg time="2026-03-02T09:35:30.193465" level="INFO">Length is 6.</msg>
-<msg time="2026-03-02T09:35:30.193678" level="INFO">${length} = 6</msg>
-<var>${length}</var>
-<arg>${product_names}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.193038" elapsed="0.000819"/>
-</kw>
-<for flavor="IN RANGE">
-<iter>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:30.194987" level="INFO">${current} = Sauce Labs Backpack</msg>
-<var>${current}</var>
-<arg>${product_names}</arg>
-<arg>${i}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.194591" elapsed="0.000538"/>
-</kw>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:30.195961" level="INFO">${next} = Sauce Labs Bike Light</msg>
-<var>${next}</var>
-<arg>${product_names}</arg>
-<arg>${i+1}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.195329" elapsed="0.000941"/>
-</kw>
-<kw name="Should Be True" owner="BuiltIn">
-<arg>'${current}' &lt;= '${next}'</arg>
-<arg>Product not in A to Z order ${current} &gt; ${next}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.196477" elapsed="0.001150"/>
-</kw>
-<var name="${i}">0</var>
-<status status="PASS" start="2026-03-02T09:35:30.194393" elapsed="0.003384"/>
-</iter>
-<iter>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:30.198711" level="INFO">${current} = Sauce Labs Bike Light</msg>
-<var>${current}</var>
-<arg>${product_names}</arg>
-<arg>${i}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.198236" elapsed="0.000705"/>
-</kw>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:30.199934" level="INFO">${next} = Sauce Labs Bolt T-Shirt</msg>
-<var>${next}</var>
-<arg>${product_names}</arg>
-<arg>${i+1}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.199176" elapsed="0.000981"/>
-</kw>
-<kw name="Should Be True" owner="BuiltIn">
-<arg>'${current}' &lt;= '${next}'</arg>
-<arg>Product not in A to Z order ${current} &gt; ${next}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.200387" elapsed="0.000695"/>
-</kw>
-<var name="${i}">1</var>
-<status status="PASS" start="2026-03-02T09:35:30.197940" elapsed="0.003256"/>
-</iter>
-<iter>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:30.201861" level="INFO">${current} = Sauce Labs Bolt T-Shirt</msg>
-<var>${current}</var>
-<arg>${product_names}</arg>
-<arg>${i}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.201527" elapsed="0.000530"/>
-</kw>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:30.202987" level="INFO">${next} = Sauce Labs Fleece Jacket</msg>
-<var>${next}</var>
-<arg>${product_names}</arg>
-<arg>${i+1}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.202312" elapsed="0.000838"/>
-</kw>
-<kw name="Should Be True" owner="BuiltIn">
-<arg>'${current}' &lt;= '${next}'</arg>
-<arg>Product not in A to Z order ${current} &gt; ${next}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.203340" elapsed="0.000686"/>
-</kw>
-<var name="${i}">2</var>
-<status status="PASS" start="2026-03-02T09:35:30.201342" elapsed="0.002794"/>
-</iter>
-<iter>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:30.204747" level="INFO">${current} = Sauce Labs Fleece Jacket</msg>
-<var>${current}</var>
-<arg>${product_names}</arg>
-<arg>${i}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.204451" elapsed="0.000459"/>
-</kw>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:30.205876" level="INFO">${next} = Sauce Labs Onesie</msg>
-<var>${next}</var>
-<arg>${product_names}</arg>
-<arg>${i+1}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.205089" elapsed="0.001079"/>
-</kw>
-<kw name="Should Be True" owner="BuiltIn">
-<arg>'${current}' &lt;= '${next}'</arg>
-<arg>Product not in A to Z order ${current} &gt; ${next}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.206372" elapsed="0.000777"/>
-</kw>
-<var name="${i}">3</var>
-<status status="PASS" start="2026-03-02T09:35:30.204272" elapsed="0.003008"/>
-</iter>
-<iter>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:30.207992" level="INFO">${current} = Sauce Labs Onesie</msg>
-<var>${current}</var>
-<arg>${product_names}</arg>
-<arg>${i}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.207663" elapsed="0.000545"/>
-</kw>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:30.208930" level="INFO">${next} = Test.allTheThings() T-Shirt (Red)</msg>
-<var>${next}</var>
-<arg>${product_names}</arg>
-<arg>${i+1}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.208381" elapsed="0.000701"/>
-</kw>
-<kw name="Should Be True" owner="BuiltIn">
-<arg>'${current}' &lt;= '${next}'</arg>
-<arg>Product not in A to Z order ${current} &gt; ${next}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.209254" elapsed="0.000543"/>
-</kw>
-<var name="${i}">4</var>
-<status status="PASS" start="2026-03-02T09:35:30.207440" elapsed="0.002460"/>
-</iter>
-<var>${i}</var>
-<value>0</value>
-<value>${length}-1</value>
-<status status="PASS" start="2026-03-02T09:35:30.193999" elapsed="0.015969"/>
-</for>
-<arg>${product_names}</arg>
-<status status="PASS" start="2026-03-02T09:35:30.192616" elapsed="0.017458"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-09T08:44:00.272243" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-09T08:43:59.271403" elapsed="1.001648"/>
 </kw>
 <kw name="Click Element" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:30.210790" level="INFO">Clicking element 'class:product_sort_container'.</msg>
-<arg>class:product_sort_container</arg>
+<msg time="2026-03-09T08:44:00.275844" level="INFO">Clicking element '//*[@id="continue"]'.</msg>
+<arg>//*[@id="continue"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.210529" elapsed="0.087232"/>
+<status status="PASS" start="2026-03-09T08:44:00.274503" elapsed="0.072266"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-09T08:44:01.347906" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-09T08:44:00.347164" elapsed="1.001570"/>
+</kw>
+<kw name="Page Should Contain Element" owner="Selenium2Library">
+<msg time="2026-03-09T08:44:01.360469" level="INFO">Current page contains element '//*[@id="checkout_info_container"]/div/form/div[1]/div[4]'.</msg>
+<arg>//*[@id="checkout_info_container"]/div/form/div[1]/div[4]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2026-03-09T08:44:01.350170" elapsed="0.011053"/>
+</kw>
+<kw name="Element Text Should Be" owner="Selenium2Library">
+<msg time="2026-03-09T08:44:01.362370" level="INFO">Verifying element '//*[@id="checkout_info_container"]/div/form/div[1]/div[4]/h3' contains exact text 'Error: First Name is required'.</msg>
+<arg>//*[@id="checkout_info_container"]/div/form/div[1]/div[4]/h3</arg>
+<arg>Error: First Name is required</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2026-03-09T08:44:01.361942" elapsed="0.011711"/>
+</kw>
+<kw name="Reload Page" owner="Selenium2Library">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2026-03-09T08:44:01.373996" elapsed="0.181658"/>
+</kw>
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2026-03-09T08:44:01.556495" level="INFO">Typing text 'yxz' into text field '//*[@id="first-name"]'.</msg>
+<arg>//*[@id="first-name"]</arg>
+<arg>yxz</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T08:44:01.556158" elapsed="0.034331"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-09T08:44:02.591445" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-09T08:44:01.590846" elapsed="1.001085"/>
+</kw>
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2026-03-09T08:44:02.593713" level="INFO">Typing text '6100' into text field '//*[@id="postal-code"]'.</msg>
+<arg>//*[@id="postal-code"]</arg>
+<arg>6100</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T08:44:02.593024" elapsed="0.036741"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-09T08:44:03.630957" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-09T08:44:02.630207" elapsed="1.001524"/>
 </kw>
 <kw name="Click Element" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:30.299146" level="INFO">Clicking element '//*[@id="header_container"]/div[2]/div/span/select/option[3]'.</msg>
-<arg>//*[@id="header_container"]/div[2]/div/span/select/option[3]</arg>
+<msg time="2026-03-09T08:44:03.634453" level="INFO">Clicking element '//*[@id="continue"]'.</msg>
+<arg>//*[@id="continue"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.298514" elapsed="0.090321"/>
+<status status="PASS" start="2026-03-09T08:44:03.633181" elapsed="0.079709"/>
 </kw>
-<kw name="Get all prices">
-<kw name="Create List" owner="BuiltIn">
-<msg time="2026-03-02T09:35:30.393577" level="INFO">${prices} = []</msg>
-<var>${prices}</var>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.391877" elapsed="0.002308"/>
+<kw name="Page Should Contain Element" owner="Selenium2Library">
+<msg time="2026-03-09T08:44:03.716546" level="INFO">Current page contains element '//*[@id="checkout_info_container"]/div/form/div[1]/div[4]'.</msg>
+<arg>//*[@id="checkout_info_container"]/div/form/div[1]/div[4]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2026-03-09T08:44:03.713365" elapsed="0.003429"/>
 </kw>
-<kw name="Get WebElements" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:30.404754" level="INFO">@{price_elements} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="d090a43f-7326-4494-bd01-b9785d7f7e75", element="cc41c1ac-d9c9-40b0-a8d7-e020db782b76")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement ...</msg>
-<var>@{price_elements}</var>
-<arg>class:inventory_item_price</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.394929" elapsed="0.010421"/>
+<kw name="Element Text Should Be" owner="Selenium2Library">
+<msg time="2026-03-09T08:44:03.717771" level="INFO">Verifying element '//*[@id="checkout_info_container"]/div/form/div[1]/div[4]/h3' contains exact text 'Error: Last Name is required'.</msg>
+<arg>//*[@id="checkout_info_container"]/div/form/div[1]/div[4]/h3</arg>
+<arg>Error: Last Name is required</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2026-03-09T08:44:03.717301" elapsed="0.013115"/>
 </kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:30.432359" level="INFO">${product_price_with$} = $7.99</msg>
-<var>${product_price_with$}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.408236" elapsed="0.024697"/>
+<kw name="Reload Page" owner="Selenium2Library">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2026-03-09T08:44:03.730910" elapsed="0.183920"/>
 </kw>
-<kw name="Replace String" owner="String">
-<msg time="2026-03-02T09:35:30.436232" level="INFO">${product_price} = 7.99</msg>
-<var>${product_price}</var>
-<arg>${product_price_with$}</arg>
-<arg>$</arg>
-<arg>${EMPTY}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.433706" elapsed="0.003346"/>
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2026-03-09T08:44:03.915918" level="INFO">Typing text 'yxz' into text field '//*[@id="first-name"]'.</msg>
+<arg>//*[@id="first-name"]</arg>
+<arg>yxz</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T08:44:03.915352" elapsed="0.023218"/>
 </kw>
-<kw name="Append To List" owner="Collections">
-<arg>${prices}</arg>
-<arg>${product_price}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.438442" elapsed="0.001718"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-09T08:44:04.940150" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-09T08:44:03.938920" elapsed="1.001983"/>
 </kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d090a43f-7326-4494-bd01-b9785d7f7e75", element="cc41c1ac-d9c9-40b0-a8d7-e020db782b76")&gt;</var>
-<status status="PASS" start="2026-03-02T09:35:30.407031" elapsed="0.033622"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:30.466139" level="INFO">${product_price_with$} = $9.99</msg>
-<var>${product_price_with$}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.443007" elapsed="0.023716"/>
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2026-03-09T08:44:04.943524" level="INFO">Typing text 'abc' into text field '//*[@id="last-name"]'.</msg>
+<arg>//*[@id="last-name"]</arg>
+<arg>abc</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T08:44:04.942241" elapsed="0.018224"/>
 </kw>
-<kw name="Replace String" owner="String">
-<msg time="2026-03-02T09:35:30.470537" level="INFO">${product_price} = 9.99</msg>
-<var>${product_price}</var>
-<arg>${product_price_with$}</arg>
-<arg>$</arg>
-<arg>${EMPTY}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.467513" elapsed="0.003906"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${prices}</arg>
-<arg>${product_price}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.472406" elapsed="0.001771"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d090a43f-7326-4494-bd01-b9785d7f7e75", element="1306d27c-6e17-4c75-a6d3-9b089dc5fb30")&gt;</var>
-<status status="PASS" start="2026-03-02T09:35:30.441961" elapsed="0.032738"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:30.498653" level="INFO">${product_price_with$} = $15.99</msg>
-<var>${product_price_with$}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.476088" elapsed="0.022974"/>
-</kw>
-<kw name="Replace String" owner="String">
-<msg time="2026-03-02T09:35:30.501561" level="INFO">${product_price} = 15.99</msg>
-<var>${product_price}</var>
-<arg>${product_price_with$}</arg>
-<arg>$</arg>
-<arg>${EMPTY}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.499628" elapsed="0.002306"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${prices}</arg>
-<arg>${product_price}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.502421" elapsed="0.000955"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d090a43f-7326-4494-bd01-b9785d7f7e75", element="53ac7edb-ecc5-4424-9870-58e7ae16183c")&gt;</var>
-<status status="PASS" start="2026-03-02T09:35:30.475328" elapsed="0.028297"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:30.514033" level="INFO">${product_price_with$} = $15.99</msg>
-<var>${product_price_with$}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.504517" elapsed="0.009725"/>
-</kw>
-<kw name="Replace String" owner="String">
-<msg time="2026-03-02T09:35:30.515375" level="INFO">${product_price} = 15.99</msg>
-<var>${product_price}</var>
-<arg>${product_price_with$}</arg>
-<arg>$</arg>
-<arg>${EMPTY}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.514522" elapsed="0.001190"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${prices}</arg>
-<arg>${product_price}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.515968" elapsed="0.000434"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d090a43f-7326-4494-bd01-b9785d7f7e75", element="92664099-6b74-42e2-9fad-c5bef2e3ac42")&gt;</var>
-<status status="PASS" start="2026-03-02T09:35:30.503967" elapsed="0.012563"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:30.524162" level="INFO">${product_price_with$} = $29.99</msg>
-<var>${product_price_with$}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.516931" elapsed="0.007397"/>
-</kw>
-<kw name="Replace String" owner="String">
-<msg time="2026-03-02T09:35:30.525213" level="INFO">${product_price} = 29.99</msg>
-<var>${product_price}</var>
-<arg>${product_price_with$}</arg>
-<arg>$</arg>
-<arg>${EMPTY}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.524551" elapsed="0.000790"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${prices}</arg>
-<arg>${product_price}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.525528" elapsed="0.000324"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d090a43f-7326-4494-bd01-b9785d7f7e75", element="d27a653b-1af7-4d48-b106-3c7af92a034a")&gt;</var>
-<status status="PASS" start="2026-03-02T09:35:30.516716" elapsed="0.009246"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:30.532072" level="INFO">${product_price_with$} = $49.99</msg>
-<var>${product_price_with$}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.526307" elapsed="0.005908"/>
-</kw>
-<kw name="Replace String" owner="String">
-<msg time="2026-03-02T09:35:30.532970" level="INFO">${product_price} = 49.99</msg>
-<var>${product_price}</var>
-<arg>${product_price_with$}</arg>
-<arg>$</arg>
-<arg>${EMPTY}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.532406" elapsed="0.000671"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${prices}</arg>
-<arg>${product_price}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.533232" elapsed="0.000273"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d090a43f-7326-4494-bd01-b9785d7f7e75", element="d48fba76-59c3-40bd-ab55-faf39391b0ad")&gt;</var>
-<status status="PASS" start="2026-03-02T09:35:30.526121" elapsed="0.007475"/>
-</iter>
-<var>${element}</var>
-<value>@{price_elements}</value>
-<status status="PASS" start="2026-03-02T09:35:30.405943" elapsed="0.127725"/>
-</for>
-<return>
-<value>@{prices}</value>
-<status status="PASS" start="2026-03-02T09:35:30.533752" elapsed="0.000099"/>
-</return>
-<msg time="2026-03-02T09:35:30.534007" level="INFO">${product_prices} = ['7.99', '9.99', '15.99', '15.99', '29.99', '49.99']</msg>
-<var>${product_prices}</var>
-<status status="PASS" start="2026-03-02T09:35:30.390325" elapsed="0.143783"/>
-</kw>
-<kw name="Verify low to high sorting">
-<kw name="Get Length" owner="BuiltIn">
-<msg time="2026-03-02T09:35:30.535494" level="INFO">Length is 6.</msg>
-<msg time="2026-03-02T09:35:30.535732" level="INFO">${length} = 6</msg>
-<var>${length}</var>
-<arg>${product_prices}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.534842" elapsed="0.001001"/>
-</kw>
-<for flavor="IN RANGE">
-<iter>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:30.536901" level="INFO">${current} = 7.99</msg>
-<var>${current}</var>
-<arg>${product_prices}</arg>
-<arg>${i}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.536597" elapsed="0.000524"/>
-</kw>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:30.537868" level="INFO">${next} = 9.99</msg>
-<var>${next}</var>
-<arg>${product_prices}</arg>
-<arg>${i+1}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.537297" elapsed="0.000706"/>
-</kw>
-<kw name="Should Be True" owner="BuiltIn">
-<arg>${current} &lt;= ${next}</arg>
-<arg>Product not in low to high order ${current} &gt; ${next}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.538218" elapsed="0.000511"/>
-</kw>
-<var name="${i}">0</var>
-<status status="PASS" start="2026-03-02T09:35:30.536413" elapsed="0.002421"/>
-</iter>
-<iter>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:30.539395" level="INFO">${current} = 9.99</msg>
-<var>${current}</var>
-<arg>${product_prices}</arg>
-<arg>${i}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.539119" elapsed="0.000382"/>
-</kw>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:30.540122" level="INFO">${next} = 15.99</msg>
-<var>${next}</var>
-<arg>${product_prices}</arg>
-<arg>${i+1}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.539649" elapsed="0.000576"/>
-</kw>
-<kw name="Should Be True" owner="BuiltIn">
-<arg>${current} &lt;= ${next}</arg>
-<arg>Product not in low to high order ${current} &gt; ${next}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.540375" elapsed="0.000465"/>
-</kw>
-<var name="${i}">1</var>
-<status status="PASS" start="2026-03-02T09:35:30.538968" elapsed="0.001971"/>
-</iter>
-<iter>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:30.541477" level="INFO">${current} = 15.99</msg>
-<var>${current}</var>
-<arg>${product_prices}</arg>
-<arg>${i}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.541207" elapsed="0.000370"/>
-</kw>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:30.542203" level="INFO">${next} = 15.99</msg>
-<var>${next}</var>
-<arg>${product_prices}</arg>
-<arg>${i+1}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.541726" elapsed="0.000580"/>
-</kw>
-<kw name="Should Be True" owner="BuiltIn">
-<arg>${current} &lt;= ${next}</arg>
-<arg>Product not in low to high order ${current} &gt; ${next}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.542458" elapsed="0.000468"/>
-</kw>
-<var name="${i}">2</var>
-<status status="PASS" start="2026-03-02T09:35:30.541060" elapsed="0.001965"/>
-</iter>
-<iter>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:30.543566" level="INFO">${current} = 15.99</msg>
-<var>${current}</var>
-<arg>${product_prices}</arg>
-<arg>${i}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.543295" elapsed="0.000373"/>
-</kw>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:30.544288" level="INFO">${next} = 29.99</msg>
-<var>${next}</var>
-<arg>${product_prices}</arg>
-<arg>${i+1}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.543816" elapsed="0.000576"/>
-</kw>
-<kw name="Should Be True" owner="BuiltIn">
-<arg>${current} &lt;= ${next}</arg>
-<arg>Product not in low to high order ${current} &gt; ${next}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.544546" elapsed="0.000467"/>
-</kw>
-<var name="${i}">3</var>
-<status status="PASS" start="2026-03-02T09:35:30.543147" elapsed="0.001964"/>
-</iter>
-<iter>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:30.545653" level="INFO">${current} = 29.99</msg>
-<var>${current}</var>
-<arg>${product_prices}</arg>
-<arg>${i}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.545378" elapsed="0.000376"/>
-</kw>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:30.546381" level="INFO">${next} = 49.99</msg>
-<var>${next}</var>
-<arg>${product_prices}</arg>
-<arg>${i+1}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.545905" elapsed="0.000581"/>
-</kw>
-<kw name="Should Be True" owner="BuiltIn">
-<arg>${current} &lt;= ${next}</arg>
-<arg>Product not in low to high order ${current} &gt; ${next}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.546640" elapsed="0.000469"/>
-</kw>
-<var name="${i}">4</var>
-<status status="PASS" start="2026-03-02T09:35:30.545233" elapsed="0.001974"/>
-</iter>
-<var>${i}</var>
-<value>0</value>
-<value>${length}-1</value>
-<status status="PASS" start="2026-03-02T09:35:30.535980" elapsed="0.011294"/>
-</for>
-<arg>${product_prices}</arg>
-<status status="PASS" start="2026-03-02T09:35:30.534459" elapsed="0.012920"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-09T08:44:05.962590" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-09T08:44:04.961429" elapsed="1.001957"/>
 </kw>
 <kw name="Click Element" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:30.547900" level="INFO">Clicking element 'class:product_sort_container'.</msg>
-<arg>class:product_sort_container</arg>
+<msg time="2026-03-09T08:44:05.966203" level="INFO">Clicking element '//*[@id="continue"]'.</msg>
+<arg>//*[@id="continue"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.547660" elapsed="0.086551"/>
+<status status="PASS" start="2026-03-09T08:44:05.964842" elapsed="0.083462"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-09T08:44:07.049551" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-09T08:44:06.048822" elapsed="1.001006"/>
+</kw>
+<kw name="Page Should Contain Element" owner="Selenium2Library">
+<msg time="2026-03-09T08:44:07.053897" level="INFO">Current page contains element '//*[@id="checkout_info_container"]/div/form/div[1]/div[4]'.</msg>
+<arg>//*[@id="checkout_info_container"]/div/form/div[1]/div[4]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2026-03-09T08:44:07.050362" elapsed="0.003816"/>
+</kw>
+<kw name="Element Text Should Be" owner="Selenium2Library">
+<msg time="2026-03-09T08:44:07.055292" level="INFO">Verifying element '//*[@id="checkout_info_container"]/div/form/div[1]/div[4]/h3' contains exact text 'Error: Postal Code is required'.</msg>
+<arg>//*[@id="checkout_info_container"]/div/form/div[1]/div[4]/h3</arg>
+<arg>Error: Postal Code is required</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2026-03-09T08:44:07.054727" elapsed="0.014992"/>
+</kw>
+<kw name="Reload Page" owner="Selenium2Library">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2026-03-09T08:44:07.070495" elapsed="0.188489"/>
+</kw>
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2026-03-09T08:44:07.259672" level="INFO">Typing text 'xyz' into text field '//*[@id="first-name"]'.</msg>
+<arg>//*[@id="first-name"]</arg>
+<arg>xyz</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T08:44:07.259345" elapsed="0.032753"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-09T08:44:08.293577" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-09T08:44:07.292426" elapsed="1.001379"/>
+</kw>
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2026-03-09T08:44:08.294639" level="INFO">Typing text 'abc' into text field '//*[@id="last-name"]'.</msg>
+<arg>//*[@id="last-name"]</arg>
+<arg>abc</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T08:44:08.294174" elapsed="0.019779"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-09T08:44:09.315118" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-09T08:44:08.314373" elapsed="1.000993"/>
+</kw>
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2026-03-09T08:44:09.316274" level="INFO">Typing text '6100' into text field '//*[@id="postal-code"]'.</msg>
+<arg>//*[@id="postal-code"]</arg>
+<arg>6100</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T08:44:09.315746" elapsed="0.026724"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-09T08:44:10.343509" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-09T08:44:09.342835" elapsed="1.001415"/>
 </kw>
 <kw name="Click Element" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:30.634968" level="INFO">Clicking element '//*[@id="header_container"]/div[2]/div/span/select/option[4]'.</msg>
-<arg>//*[@id="header_container"]/div[2]/div/span/select/option[4]</arg>
+<msg time="2026-03-09T08:44:10.346777" level="INFO">Clicking element '//*[@id="continue"]'.</msg>
+<arg>//*[@id="continue"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.634623" elapsed="0.087105"/>
+<status status="PASS" start="2026-03-09T08:44:10.345576" elapsed="0.082758"/>
 </kw>
-<kw name="Get all prices">
-<kw name="Create List" owner="BuiltIn">
-<msg time="2026-03-02T09:35:30.726160" level="INFO">${prices} = []</msg>
-<var>${prices}</var>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.724684" elapsed="0.002039"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-09T08:44:11.429751" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-09T08:44:10.429019" elapsed="1.001522"/>
 </kw>
-<kw name="Get WebElements" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:30.735948" level="INFO">@{price_elements} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="d090a43f-7326-4494-bd01-b9785d7f7e75", element="d48fba76-59c3-40bd-ab55-faf39391b0ad")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement ...</msg>
-<var>@{price_elements}</var>
-<arg>class:inventory_item_price</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.727439" elapsed="0.008981"/>
+<kw name="Page Should Contain" owner="Selenium2Library">
+<msg time="2026-03-09T08:44:11.447909" level="INFO">Current page contains text 'Checkout: Overview'.</msg>
+<arg>Checkout: Overview</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-03-09T08:44:11.431979" elapsed="0.016120"/>
 </kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:30.748818" level="INFO">${product_price_with$} = $49.99</msg>
-<var>${product_price_with$}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.737802" elapsed="0.011235"/>
+<kw name="Click Button" owner="Selenium2Library">
+<msg time="2026-03-09T08:44:11.449059" level="INFO">Clicking button '//*[@id="cancel"]'.</msg>
+<arg>//*[@id="cancel"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T08:44:11.448646" elapsed="0.079396"/>
 </kw>
-<kw name="Replace String" owner="String">
-<msg time="2026-03-02T09:35:30.750188" level="INFO">${product_price} = 49.99</msg>
-<var>${product_price}</var>
-<arg>${product_price_with$}</arg>
-<arg>$</arg>
-<arg>${EMPTY}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.749330" elapsed="0.001030"/>
+<kw name="Page Should Contain Element" owner="Selenium2Library">
+<msg time="2026-03-09T08:44:11.531193" level="INFO">Current page contains element '//*[@id="header_container"]/div[2]/div/span/select'.</msg>
+<arg>//*[@id="header_container"]/div[2]/div/span/select</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2026-03-09T08:44:11.528424" elapsed="0.002965"/>
 </kw>
-<kw name="Append To List" owner="Collections">
-<arg>${prices}</arg>
-<arg>${product_price}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.750606" elapsed="0.000433"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-09T08:44:13.532398" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-09T08:44:11.531775" elapsed="2.001425"/>
 </kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d090a43f-7326-4494-bd01-b9785d7f7e75", element="d48fba76-59c3-40bd-ab55-faf39391b0ad")&gt;</var>
-<status status="PASS" start="2026-03-02T09:35:30.737381" elapsed="0.013805"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:30.759027" level="INFO">${product_price_with$} = $29.99</msg>
-<var>${product_price_with$}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.751527" elapsed="0.007649"/>
+<kw name="Close Browser" owner="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-09T08:44:13.534611" elapsed="2.795526"/>
 </kw>
-<kw name="Replace String" owner="String">
-<msg time="2026-03-02T09:35:30.760028" level="INFO">${product_price} = 29.99</msg>
-<var>${product_price}</var>
-<arg>${product_price_with$}</arg>
-<arg>$</arg>
-<arg>${EMPTY}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.759378" elapsed="0.000774"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${prices}</arg>
-<arg>${product_price}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.760321" elapsed="0.000300"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d090a43f-7326-4494-bd01-b9785d7f7e75", element="d27a653b-1af7-4d48-b106-3c7af92a034a")&gt;</var>
-<status status="PASS" start="2026-03-02T09:35:30.751372" elapsed="0.009346"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:30.767122" level="INFO">${product_price_with$} = $15.99</msg>
-<var>${product_price_with$}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.761024" elapsed="0.006249"/>
-</kw>
-<kw name="Replace String" owner="String">
-<msg time="2026-03-02T09:35:30.768184" level="INFO">${product_price} = 15.99</msg>
-<var>${product_price}</var>
-<arg>${product_price_with$}</arg>
-<arg>$</arg>
-<arg>${EMPTY}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.767470" elapsed="0.000867"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${prices}</arg>
-<arg>${product_price}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.768505" elapsed="0.000341"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d090a43f-7326-4494-bd01-b9785d7f7e75", element="53ac7edb-ecc5-4424-9870-58e7ae16183c")&gt;</var>
-<status status="PASS" start="2026-03-02T09:35:30.760865" elapsed="0.008093"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:30.775154" level="INFO">${product_price_with$} = $15.99</msg>
-<var>${product_price_with$}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.769388" elapsed="0.005911"/>
-</kw>
-<kw name="Replace String" owner="String">
-<msg time="2026-03-02T09:35:30.776156" level="INFO">${product_price} = 15.99</msg>
-<var>${product_price}</var>
-<arg>${product_price_with$}</arg>
-<arg>$</arg>
-<arg>${EMPTY}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.775496" elapsed="0.000769"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${prices}</arg>
-<arg>${product_price}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.776425" elapsed="0.000285"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d090a43f-7326-4494-bd01-b9785d7f7e75", element="92664099-6b74-42e2-9fad-c5bef2e3ac42")&gt;</var>
-<status status="PASS" start="2026-03-02T09:35:30.769118" elapsed="0.007684"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:30.783387" level="INFO">${product_price_with$} = $9.99</msg>
-<var>${product_price_with$}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.777097" elapsed="0.006436"/>
-</kw>
-<kw name="Replace String" owner="String">
-<msg time="2026-03-02T09:35:30.784444" level="INFO">${product_price} = 9.99</msg>
-<var>${product_price}</var>
-<arg>${product_price_with$}</arg>
-<arg>$</arg>
-<arg>${EMPTY}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.783729" elapsed="0.000831"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${prices}</arg>
-<arg>${product_price}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.784720" elapsed="0.000359"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d090a43f-7326-4494-bd01-b9785d7f7e75", element="1306d27c-6e17-4c75-a6d3-9b089dc5fb30")&gt;</var>
-<status status="PASS" start="2026-03-02T09:35:30.776941" elapsed="0.008244"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="Selenium2Library">
-<msg time="2026-03-02T09:35:30.791985" level="INFO">${product_price_with$} = $7.99</msg>
-<var>${product_price_with$}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.785630" elapsed="0.006506"/>
-</kw>
-<kw name="Replace String" owner="String">
-<msg time="2026-03-02T09:35:30.792896" level="INFO">${product_price} = 7.99</msg>
-<var>${product_price}</var>
-<arg>${product_price_with$}</arg>
-<arg>$</arg>
-<arg>${EMPTY}</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.792330" elapsed="0.000673"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${prices}</arg>
-<arg>${product_price}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.793162" elapsed="0.000265"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d090a43f-7326-4494-bd01-b9785d7f7e75", element="cc41c1ac-d9c9-40b0-a8d7-e020db782b76")&gt;</var>
-<status status="PASS" start="2026-03-02T09:35:30.785326" elapsed="0.008190"/>
-</iter>
-<var>${element}</var>
-<value>@{price_elements}</value>
-<status status="PASS" start="2026-03-02T09:35:30.736747" elapsed="0.056838"/>
-</for>
-<return>
-<value>@{prices}</value>
-<status status="PASS" start="2026-03-02T09:35:30.793672" elapsed="0.000099"/>
-</return>
-<msg time="2026-03-02T09:35:30.793928" level="INFO">${product_prices} = ['49.99', '29.99', '15.99', '15.99', '9.99', '7.99']</msg>
-<var>${product_prices}</var>
-<status status="PASS" start="2026-03-02T09:35:30.723304" elapsed="0.070728"/>
-</kw>
-<kw name="Verify high to low sorting">
-<kw name="Get Length" owner="BuiltIn">
-<msg time="2026-03-02T09:35:30.795076" level="INFO">Length is 6.</msg>
-<msg time="2026-03-02T09:35:30.795470" level="INFO">${length} = 6</msg>
-<var>${length}</var>
-<arg>${product_prices}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.794724" elapsed="0.000854"/>
-</kw>
-<for flavor="IN RANGE">
-<iter>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:30.796435" level="INFO">${current} = 49.99</msg>
-<var>${current}</var>
-<arg>${product_prices}</arg>
-<arg>${i}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.796140" elapsed="0.000621"/>
-</kw>
-<kw name="Get From List" owner="Collections">
-<msg time="2026-03-02T09:35:30.797581" level="INFO">${next} = 29.99</msg>
-<var>${next}</var>
-<arg>${product_prices}</arg>
-<arg>${i+1}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2026-03-02T09:35:30.796981" elapsed="0.000752"/>
-</kw>
-<kw name="Should Be True" owner="BuiltIn">
-<msg time="2026-03-02T09:35:30.798520" level="FAIL">Product not in high to low order 49.99 &lt; 29.99</msg>
-<arg>${current} &lt;= ${next}</arg>
-<arg>Product not in high to low order ${current} &lt; ${next}</arg>
-<doc>Fails if the given condition is not true.</doc>
-<status status="FAIL" start="2026-03-02T09:35:30.797912" elapsed="0.004888">Product not in high to low order 49.99 &lt; 29.99</status>
-</kw>
-<var name="${i}">0</var>
-<status status="FAIL" start="2026-03-02T09:35:30.795977" elapsed="0.007068">Product not in high to low order 49.99 &lt; 29.99</status>
-</iter>
-<var>${i}</var>
-<value>0</value>
-<value>${length}-1</value>
-<status status="FAIL" start="2026-03-02T09:35:30.795698" elapsed="0.007452">Product not in high to low order 49.99 &lt; 29.99</status>
-</for>
-<arg>${product_prices}</arg>
-<status status="FAIL" start="2026-03-02T09:35:30.794385" elapsed="0.009042">Product not in high to low order 49.99 &lt; 29.99</status>
-</kw>
-<status status="FAIL" start="2026-03-02T09:35:23.263835" elapsed="7.540210">Product not in high to low order 49.99 &lt; 29.99</status>
+<status status="PASS" start="2026-03-09T08:43:51.455007" elapsed="24.875511"/>
 </test>
-<status status="FAIL" start="2026-03-02T09:35:23.028584" elapsed="7.788170"/>
+<status status="PASS" start="2026-03-09T08:43:51.187104" elapsed="25.147778"/>
 </suite>
-<status status="FAIL" start="2026-03-02T09:35:22.980763" elapsed="7.839596"/>
+<status status="PASS" start="2026-03-09T08:43:51.150350" elapsed="25.188100"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Robot Framework" id="s1" pass="0" fail="1" skip="0">Robot Framework</stat>
-<stat name="Sorting alphabetically" id="s1-s1" pass="0" fail="1" skip="0">Robot Framework.Sorting alphabetically</stat>
+<stat name="Robot Framework" id="s1" pass="1" fail="0" skip="0">Robot Framework</stat>
+<stat name="Checkout" id="s1-s1" pass="1" fail="0" skip="0">Robot Framework.Checkout</stat>
 </suite>
 </statistics>
 <errors>
