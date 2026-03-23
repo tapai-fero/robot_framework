@@ -1,0 +1,17 @@
+1774252631085	geckodriver	INFO	Listening on 127.0.0.1:61658
+1774252634163	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61659" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\TAPAI-~1\\AppData\\Local\\Temp\\rust_mozprofileCZ4sMP"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1774252634467	Marionette	INFO	Marionette enabled
+1774252634565	Marionette	INFO	Listening on port 60576
+Read port: 60576
+WebDriver BiDi listening on ws://127.0.0.1:61659
+1774252634613	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://parking-garage-app.netlify.app."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://parking-garage-app.netlify.app."
+1774252646139	Marionette	INFO	Stopped listening on port 60576
+Dynamically enable window occlusion 1
+console.error: Translations: "Failed to run language detection." (new AbortError("Actor 'Translations' destroyed before query 'Translations:GetDocumentElementLang' was resolved", (void 0)))
+console.warn: TopSitesFeed: Failed to fetch data from MARS server: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/Sqlite.sys.mjs, line 1128: Error: Connection is not open.

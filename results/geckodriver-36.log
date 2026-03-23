@@ -1,0 +1,17 @@
+1774252395182	geckodriver	INFO	Listening on 127.0.0.1:64564
+1774252398312	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64565" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\TAPAI-~1\\AppData\\Local\\Temp\\rust_mozprofileC6pwlb"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1774252398630	Marionette	INFO	Marionette enabled
+1774252398735	Marionette	INFO	Listening on port 50167
+WebDriver BiDi listening on ws://127.0.0.1:64565
+Read port: 50167
+1774252398912	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://parking-garage-app.netlify.app."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://parking-garage-app.netlify.app."
+JavaScript error: resource://gre/actors/FormHandlerChild.sys.mjs, line 103: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'FormHandler' has been destroyed
+1774252414671	Marionette	INFO	Stopped listening on port 50167
+Dynamically enable window occlusion 1
+console.error: Translations: "Failed to run language detection." (new AbortError("Actor 'Translations' destroyed before query 'Translations:GetDocumentElementLang' was resolved", (void 0)))
+console.warn: TopSitesFeed: Failed to fetch data from MARS server: NetworkError when attempting to fetch resource.

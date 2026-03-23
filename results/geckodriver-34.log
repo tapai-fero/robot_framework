@@ -1,0 +1,16 @@
+1774252303938	geckodriver	INFO	Listening on 127.0.0.1:55070
+1774252307077	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55071" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\TAPAI-~1\\AppData\\Local\\Temp\\rust_mozprofileov1Hg7"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1774252307386	Marionette	INFO	Marionette enabled
+1774252307494	Marionette	INFO	Listening on port 65373
+WebDriver BiDi listening on ws://127.0.0.1:55071
+Read port: 65373
+1774252307675	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://parking-garage-app.netlify.app."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://parking-garage-app.netlify.app."
+JavaScript error: resource://gre/actors/FormHandlerChild.sys.mjs, line 103: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'FormHandler' has been destroyed
+1774252319873	Marionette	INFO	Stopped listening on port 65373
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from MARS server: NetworkError when attempting to fetch resource.
